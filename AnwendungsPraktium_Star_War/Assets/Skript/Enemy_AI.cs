@@ -6,6 +6,20 @@ public class Enemy_AI : MonoBehaviour
 {
 
 
+    
+
+
+    /*
+
+    distance              
+    transformPlayer    aktulle Koordinaten des Spieler
+    checkDisatnce      wie viel ist die Abstand zwischen den Gegener und der Spieler
+    rotationspeed      Genger Roationsgeschwindigkeit 
+    moveEnemyspeed     Genger Bewegungsgeschwindigkeit zum Spieler 
+    trackZone          Abstand indem der Gegner die Zeit 
+    attackZone         Angriffe intravall Zeit 
+
+    */
     [Header("Enemy AI Setting")]
     [SerializeField] float distance;
     [SerializeField] Transform transformPlayer;
@@ -23,7 +37,11 @@ public class Enemy_AI : MonoBehaviour
   
     private float attackTime;
 
-   
+    /*
+         Bestimmung der aktuellen Position der Spieler 
+         Bestimmung der aktuellen Zeit bis zum Angriff. 
+
+    */
     void Start()
     {
 
@@ -32,7 +50,20 @@ public class Enemy_AI : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+
+   
+
+    /*
+  
+        die Entfernung zwischen den Spielern und den Gegnern wird berechnet
+
+        Solange der Spieler noch nicht vom Gegner entdeckt wurde, wird die Methode Check() aufgerufen
+        
+        Wenn der Spieler in die Zone des Gegners eindringt, wird die Methode Attack() aufgerufen, um den Angriff zu starten.
+
+         Der Spieler wird vom Gegner verfolgt, wenn er in der Verfolgungszone bleibt  
+
+    */
     void Update()
     {
         distance = Vector3.Distance(transformPlayer.position, transform.position);
@@ -57,16 +88,29 @@ public class Enemy_AI : MonoBehaviour
 
     void Check()
     {
-       
+        /*
+            Look at Spieler 
+        */
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(transformPlayer.position - transform.position), rotationspeed * Time.deltaTime);
     }
 
     void trackTarget()
     {
+
+         /*
+            Gegnerbewegung zu Spierler
+        */
         transform.position += transform.forward * moveEnemyspeed * Time.deltaTime;
         setlaserON(false);
     }
 
+
+    /*
+       Beim Angriff wird der LaserEffact aktiviert und die GitHit-Methode aufgerufen, so dass das Leben des Spielers reduziert wird.
+       Außerdem wird der Angriff jede Sekunde durchgeführt
+
+
+    */
     void attack()
     {
         setlaserON(true);
@@ -78,6 +122,10 @@ public class Enemy_AI : MonoBehaviour
         }
     }
 
+
+    /*
+        Laser aktiviert Method
+    */
     void setlaserON(bool isActive)
     {
 
