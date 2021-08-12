@@ -8,7 +8,7 @@ public class Score : MonoBehaviour
 {
 
     /*
-        score   aktulle Punkte anzahl
+        score   aktulle Punktanzahl
         
         sText   Score Text
 
@@ -18,7 +18,6 @@ public class Score : MonoBehaviour
     public int score;
     LevelUp levelUp;
     public Text sText;
-    public Text level;
 
         /*
              
@@ -38,8 +37,8 @@ public class Score : MonoBehaviour
     }
 
             /*
-                   die Punktzahl erhöhen und Schreiben im Score-Text , und die Punktzahl wird bei der Methode LevelupChange überprüft,
-                   ob die Stufe erhöht wurde oder nicht.
+                   die Punktzahl erhöhen und werden im Score-Text angzeigt, und die Punktzahl wird bei der Methode LevelupChange überprüft,
+                   ob die Stufe erhöht wird oder nicht.
 
             */
 
