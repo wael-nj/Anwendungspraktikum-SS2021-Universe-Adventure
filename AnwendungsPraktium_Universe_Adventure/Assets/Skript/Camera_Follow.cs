@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Camera_Follow : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // Start is called before the first frame update ** die Zeile ist nötig? können wir es löschen?
     public GameObject player;
     private Vector3 offset;
 
@@ -35,7 +35,7 @@ public class Camera_Follow : MonoBehaviour
     void LateUpdate()
     {
         /*
-               Die genauen Koordinaten der Kameraposition basierend auf der X-, Y- und Z-Achse des Players aktualisieren. 
+             Die genauen Koordinaten der Kameraposition basierend auf der X-, Y- und Z-Achse des Players aktualisieren. 
         */
         newTransform.x = player.transform.position.x + offset.x;
         newTransform.y = player.transform.position.y + offset.y;
