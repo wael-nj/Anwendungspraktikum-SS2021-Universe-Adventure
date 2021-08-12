@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
     Score score;
 
     /*
-        bei start wird das Objekt Score ausgesucht, um referenz diese Socre Objekt zu bestimmen
+        beim Start wird das Objekt Score ausgesucht, um referenz diese Socre Objekt zu bestimmen
 
     */
      void Start() {
@@ -38,11 +38,8 @@ public class Enemy : MonoBehaviour
 
       
 
-      Diese Methode wird verwendet, um eine Kollision zu erkennen, wenn die Spieler auf den Feind schießen
-
-      wenn das Leben des Feindes klein 1 ist, wird der Fund zerstört.
-
-      und Score wird erhöht
+      Diese Methode wird verwendet, um eine Kollision zu erkennen, wenn der Spieler auf den Feind schießt.
+      Wenn das Leben des Feindes kleiner als 1 ist, wird der Feind zerstört und Score der Spieler erhöht.
 
 
     */
@@ -59,7 +56,7 @@ public class Enemy : MonoBehaviour
     }
 
     /*
-        Das Leben des Feindes wird reduziert und der Effekt wird angewendet 
+        Das Leben des Feindes wird reduziert und der Explosion-Effekt wird angewendet 
         und die resultierenden Instanziierungen werden zu einem GameObject kombiniert
 
     */
@@ -73,7 +70,7 @@ public class Enemy : MonoBehaviour
 
    /*
         Der Effekt wird angewendet und die resultierenden Instanziierungen werden zu einem GameObject kombiniert
-        und  der Fund zerstört wird.
+        und der Feind zerstört wird.
     */
     void EnemyDeath(){
 
