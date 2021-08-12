@@ -7,7 +7,7 @@ public class ButtonHandler : MonoBehaviour
 {
     /*
       Dieses Skript lädt die Spielszene für den Spieler, 
-      wenn er die Starttaste drückt oder wenn er das Spiel beenden möchte, wenn er die Exittaste drückt
+      ??? wenn er die Starttaste drückt oder wenn er das Spiel beenden möchte, wenn er die Exittaste drückt
 
     */
     public void playGame()
@@ -27,7 +27,7 @@ public class ButtonHandler : MonoBehaviour
     }
 
     /* 
-        Game Beenden
+      Sobald Exit-Button gedrückt wird, wird die Funktion exitGame() aufgerufen, um das Spiel zu beenden.
 
 
    */
