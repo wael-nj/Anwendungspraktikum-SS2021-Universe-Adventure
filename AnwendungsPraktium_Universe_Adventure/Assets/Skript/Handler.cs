@@ -10,7 +10,7 @@ public class Handler : MonoBehaviour
 
      Kollisionen zwischen Spielern und Feinden 
      
-     ??? Wenn der playerBoxColider ausgelöst wird
+     Wenn der Spieler-Box-Collider mit dem Feind-Box-Collider in Kollision geht.
 
      playerDeath    Exploison-Effekt
 

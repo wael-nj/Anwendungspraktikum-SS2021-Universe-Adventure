@@ -7,7 +7,7 @@ public class SelfDestroy : MonoBehaviour
 
 
     /*
-       ?? Zerstörungseffekt mit Explosion
+       ?? Zerstörungseffekt der Explosion
        ?? Explosion effekt oder wie???
        Wird beim Gegner-Explosion verwendet
        ?? Das zerstörte Gegner-Objekt wird im Spiel entferntet.

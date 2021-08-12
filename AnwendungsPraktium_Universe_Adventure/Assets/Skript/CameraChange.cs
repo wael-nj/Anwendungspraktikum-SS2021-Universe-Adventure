@@ -14,12 +14,7 @@ public class CameraChange : MonoBehaviour
     */
     public int camMode;
 
-    /* können wir start() nicht löschen? wenn wir nicht brauchen? */
-
-    void Start()
-    {
-
-    }
+   
 
     /*
         Im InputManger ist eine Drucktaste definiert, mit der wir die Kamera auswählen können. 
