@@ -7,11 +7,13 @@ public class SelfDestroy : MonoBehaviour
 
 
     /*
-       Zerstörungseffekt mit Explosion
-        Wird beim Gegner-Explosion verwendet
+       ?? Zerstörungseffekt mit Explosion
+       ?? Explosion effekt oder wie???
+       Wird beim Gegner-Explosion verwendet
+       ?? Das zerstörte Gegner-Objekt wird im Spiel entferntet.
     */
     [SerializeField] float destroyTime=3f;
-    // Start is called before the first frame update
+    
     void Start()
     {
         Destroy(gameObject,destroyTime);
