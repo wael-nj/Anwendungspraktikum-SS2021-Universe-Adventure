@@ -8,7 +8,7 @@ public class GameOver : MonoBehaviour
 {
 
     /*
-       Dieses Skript funktioniert wie das Skript Handler, um Spielszene für den Spieler zu laden.
+       Dieses Skript funktioniert wie das Skript Button-Handler, um Spielszene für den Spieler zu laden.
        ???? wenn er die Restarttaste drückt oder wenn er das Spiel beenden möchte, wenn er die Exittaste drückt
 
      */
