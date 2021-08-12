@@ -72,7 +72,7 @@ public class PlayerMovment : MonoBehaviour
 
     /*
             Translation() Diese Methode wird verwendet, um die Bewegung der Spieler auf der X-, Y- und Z-Achse  mit dem Maus und Keyborad zu ermöglichen.
-            Clamped wird verwendet, um den Bereich der Spieler zu begrenzen
+            Clamped wird verwendet, um den Bereich des Spielers zu begrenzen
             
     */
 
@@ -89,7 +89,7 @@ public class PlayerMovment : MonoBehaviour
         vertical     = movmentplayer.ReadValue<Vector2>().y * Time.deltaTime * playerspeed;
 
         /*
-            Clamped wird verwendet, um den Bereich der Spieler auf X-Achse zu begrenzen
+            Clamped wird verwendet, um den Bereich des Spielers auf X-Achse zu begrenzen
             
         */
         float xOffset = horizontal * controlspeed; ;
@@ -97,7 +97,7 @@ public class PlayerMovment : MonoBehaviour
         float clampedXPos = Mathf.Clamp(rowXPos, -xRang, xRang);
 
         /*
-             Clamped wird verwendet, um den Bereich der Spieler auf Y-Achse zu begrenzen
+             Clamped wird verwendet, um den Bereich des Spielers auf Y-Achse zu begrenzen
             
         */
 
@@ -107,7 +107,7 @@ public class PlayerMovment : MonoBehaviour
 
         /*
 
-           Die Koordinate für den Bereich der Spieler, die gehen dürfen, festlegen
+           Die Koordinate für den Bereich des Spielers, die gehen dürfen, festlegen
             
         */
 
@@ -115,7 +115,7 @@ public class PlayerMovment : MonoBehaviour
 
         /*
 
-           Die Translate-Koordinate für den Bereich der Spieler mit Maus und Keyborad
+           Die Translate-Koordinate für den Bereich des Spielers mit Maus und Keyborad
             
         */
         
@@ -146,9 +146,9 @@ public class PlayerMovment : MonoBehaviour
 
         /*
             Alle Leser Element wird aktiviert.
-            Leser sind Partkielsystem die Haben eine Emission-Attrubite, die für genierung der anzahl der Partiekle verantowrlich ist .
-            wenn die Wert True ist wird Emission akktiveirt.
-            wenn die Wert False ist wird Emission deaktiviert.
+            ??? Leser sind Partkielsystem die Haben eine Emission-Attrubite, die für genierung der anzahl der Partiekle verantowrlich ist .
+            wenn der Wert True ist wird Emission akktiveirt.
+            wenn der Wert False ist wird Emission deaktiviert.
 
         */
     void setlaserON(bool isActive)
