@@ -16,8 +16,8 @@ public class Enemy_AI : MonoBehaviour
     checkDisatnce      wie viel ist die Abstand zwischen den Gegener und der Spieler
     rotationspeed      Genger Roationsgeschwindigkeit 
     moveEnemyspeed     Genger Bewegungsgeschwindigkeit zum Spieler 
-    trackZone          Abstand indem der Gegner die Zeit 
-    attackZone         Angriffe intravall Zeit 
+    trackZone          Distanz vom Verfolgen  
+    attackZone         Distanz des Angriffes 
 
     */
     [Header("Enemy AI Setting")]
@@ -61,7 +61,7 @@ public class Enemy_AI : MonoBehaviour
         
         Wenn der Spieler in die Zone des Gegners eindringt, wird die Methode Attack() aufgerufen, um den Angriff zu starten.
 
-         Der Spieler wird vom Gegner verfolgt, wenn er in der Verfolgungszone bleibt  
+        Der Spieler wird vom Gegner verfolgt, wenn er die Verfolgungszone erreicht.  
 
     */
     void Update()
@@ -89,7 +89,7 @@ public class Enemy_AI : MonoBehaviour
     void Check()
     {
         /*
-            Look at Spieler 
+            Look at Spieler ???
         */
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(transformPlayer.position - transform.position), rotationspeed * Time.deltaTime);
     }
@@ -98,7 +98,7 @@ public class Enemy_AI : MonoBehaviour
     {
 
          /*
-            Gegnerbewegung zu Spierler
+            Gegnerbewegung zum Spieler
         */
         transform.position += transform.forward * moveEnemyspeed * Time.deltaTime;
         setlaserON(false);
@@ -106,8 +106,8 @@ public class Enemy_AI : MonoBehaviour
 
 
     /*
-       Beim Angriff wird der LaserEffact aktiviert und die GitHit-Methode aufgerufen, so dass das Leben des Spielers reduziert wird.
-       Außerdem wird der Angriff jede Sekunde durchgeführt
+       Beim Angriff wird der LaserEffact aktiviert und die Methode GitHit() im Life-Skript aufgerufen, so dass das Leben des Spielers reduziert wird.
+       Außerdem wird der Angriff jede Sekunde durchgeführt.
 
 
     */
