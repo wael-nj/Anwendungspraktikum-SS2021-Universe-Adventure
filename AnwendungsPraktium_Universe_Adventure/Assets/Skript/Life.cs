@@ -9,12 +9,12 @@ public class Life : MonoBehaviour
     Handler handler;
 
     /*
-        maxLife      Spieler-Leben
+        maxLife      Amfangsleben
 
-        currentLife  Aktulle-Leben
+        currentLife  Aktuelles Leben
 
-        bar          Bildbar,die das leben darstellt
-    */
+        bar          Bild, das das Leben darstellt
+     */
 
     [SerializeField] float maxLife = 1000;
     [SerializeField] float currentLife = 0;
@@ -24,7 +24,7 @@ public class Life : MonoBehaviour
     /*
        
 
-       zum anfang currentLife  bestimmen
+       der Wert von currentLife bestimmen
 
         
     */
@@ -38,9 +38,9 @@ public class Life : MonoBehaviour
      /*
        
 
-      currentLife wird reduziert, wenn der Spieler angegriffen wird
-      und der Lebensbarwert wird reduziert
-      Wenn der Wert 0 ist, wird der Spieler töd  und die GameOver-Szene wird geladen.
+      currentLife wird reduziert, wenn der Spieler angegriffen wird.
+      Und der Wert des Lebens wird reduziert, wird das dargestelltes Balkenbild entsprechend nach rechts gezogen.
+      Wenn der Wert 0 ist, wird der Spieler sterben und die GameOver-Szene geladen.
 
         
     */
@@ -57,7 +57,7 @@ public class Life : MonoBehaviour
     }
 
     /*
-         lifebar Wert wird reduziert
+         Die Füllung des Balkenbilds wird reduziert.
     */
     void lifeBar()
     {
