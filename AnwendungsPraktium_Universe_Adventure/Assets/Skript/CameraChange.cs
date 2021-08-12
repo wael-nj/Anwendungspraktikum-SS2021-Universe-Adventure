@@ -9,12 +9,12 @@ public class CameraChange : MonoBehaviour
     public GameObject thridCam;
     public GameObject firstCam;
     /*
-            CamMode Dient die  Modauswähle des Kamera
+            CamMode dient die Modulauswahl des Kamera
 
     */
     public int camMode;
 
-
+    /* können wir start() nicht löschen? wenn wir nicht brauchen? */
 
     void Start()
     {
@@ -43,9 +43,9 @@ public class CameraChange : MonoBehaviour
 
 
     /*
-        Diese Methode wird verwendet, um zu bestimmen, welche Kamera aktiviert wird, wenn die Taste gedrückt wird  
+        Diese Methode wird verwendet, um zu bestimmen, welche Kamera aktiviert wird, wenn die bestimmte Taste gedrückt wird.  
         wenn CamMode 0, wird die dritte Kamera aktiviert und die erste Kamera deaktiviert.
-        wenn CamMode 1,wird die erste Kamera  aktiviert und die dritte Kamera deaktiviert.
+        wenn CamMode 1, wird die erste Kamera  aktiviert und die dritte Kamera deaktiviert.
    */
     IEnumerator camChange()
     {
