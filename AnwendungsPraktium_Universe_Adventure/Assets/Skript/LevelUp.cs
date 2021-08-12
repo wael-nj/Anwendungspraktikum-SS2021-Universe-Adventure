@@ -9,7 +9,7 @@ public class LevelUp : MonoBehaviour
  
     /*
         Diese Klasse wird verwendet, um die Stufe des Spielers zu erhöhen
-        und auf den LevelUp-Text anzeigen  
+        und das Ergebnis auf den LevelUp-Text anzuzeigen  
 
     */
     int levelUpPlayer =1;
