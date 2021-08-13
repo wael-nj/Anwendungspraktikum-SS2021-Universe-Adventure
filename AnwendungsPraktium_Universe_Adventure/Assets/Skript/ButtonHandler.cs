@@ -7,7 +7,7 @@ public class ButtonHandler : MonoBehaviour
 {
     /*
       Dieses Skript lädt die Spielszene für den Spieler, 
-      ??? wenn er die Start-Button drückt oder wenn er das Spiel beenden möchte, wenn er die Exit-Button drückt
+      wenn er die Start-Button drückt oder wenn er das Spiel beenden möchte, wenn er die Exit-Button drückt
 
     */
     public void playGame()

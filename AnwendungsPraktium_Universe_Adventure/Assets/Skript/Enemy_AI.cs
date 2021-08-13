@@ -89,7 +89,7 @@ public class Enemy_AI : MonoBehaviour
     void Check()
     {
         /*
-            Look at Spieler ???
+           Den Spieler im Auge behalten 
         */
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(transformPlayer.position - transform.position), rotationspeed * Time.deltaTime);
     }
